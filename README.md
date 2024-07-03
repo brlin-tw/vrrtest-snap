@@ -11,6 +11,16 @@ This section documents the external materials that is referenced during the deve
 
 * [Nixola/VRRTest: A small utility I wrote to test variable refresh rate on Linux. Should work on all major OSes.](https://github.com/Nixola/VRRTest)  
   The upstream project.
+* [The dump plugin | Snapcraft documentation](https://snapcraft.io/docs/dump-plugin)  
+  Explains how to use the `organize` property of the dump plugin.
+* [Supported interfaces | Snapcraft documentation](https://snapcraft.io/docs/supported-interfaces)  
+  Enumerates the supported security confinement interfaces of snapd.
+* [Snapcraft app and service metadata | Snapcraft documentation](https://snapcraft.io/docs/snapcraft-app-and-service-metadata)  
+  Explains how to use the `command` property of the `app` stanza.
+* [popey's reply - How to create YAML for a simple Godot 3 engine project game, how to create snap? - snapcraft - snapcraft.io](https://forum.snapcraft.io/t/how-to-create-yaml-for-a-simple-godot-3-engine-project-game-how-to-create-snap/9822/2)  
+  Explains how to use the `glib-only` desktop helper.
+* [snapcraft-desktop-helpers/glib-only at master · ubuntu/snapcraft-desktop-helpers](https://github.com/ubuntu/snapcraft-desktop-helpers/tree/master/glib-only)  
+  Contains the implementation of the `glib-only` desktop helper.
 
 ## Licensing
 
