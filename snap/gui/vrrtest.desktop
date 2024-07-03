@@ -1,0 +1,14 @@
+# Desktop entry file for VRRTest
+# Refer the Desktop Entry Specification on how to write this file:
+# https://specifications.freedesktop.org/desktop-entry-spec
+#
+# Copyright 2024 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=VRRTest (Snap)
+Comment=Test variable refresh rate on Linux
+Exec=vrrtest
+Icon=${SNAP}/meta/gui/placeholder-icon.png
+Categories=Utilities
