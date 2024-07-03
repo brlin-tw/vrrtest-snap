@@ -22,7 +22,7 @@ description: |-
       Linux. Should work on all major OSes.
       https://github.com/Nixola/VRRTest
 
-grade: devel
+grade: stable
 confinement: strict
 
 parts:
