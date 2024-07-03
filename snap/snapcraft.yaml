@@ -3,7 +3,8 @@
 # SPDX-License-Identifier: Zlib
 name: vrrtest
 title: VRRTest (UNOFFICIAL)
-summary: Test variable refresh rate on Linux
+summary: >-
+  A small utility to test Variable Refresh Rate(VRR) capable displays on Linux.
 description: |-
   **Packager-specific information**
 
