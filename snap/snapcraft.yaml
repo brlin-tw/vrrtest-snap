@@ -43,11 +43,14 @@ architectures:
 parts:
   vrrtest:
     source: https://github.com/Nixola/VRRTest.git
-    source-tag: v2.0.0
     plugin: dump
     organize:
       '*': VRRTest/
     build-packages:
+      # selective-checkout dependencies
+      - curl
+      - jq
+      - sed
       - git
     override-pull: |
       set -o nounset
@@ -59,9 +62,10 @@ parts:
           exit 2
       fi
 
-      if ! "${CRAFT_PROJECT_DIR}/snap/local/scriptlets/upstream-adopt-info"; then
+      if ! "${CRAFT_PROJECT_DIR}/snap/local/scriptlets/selective-checkout" \
+          --append-packaging-revision; then
           printf \
-            'Error: Unable to run the upstream adopt info program.\n' \
+            'Error: Unable to run the selective-checkout program.\n' \
             1>&2
           exit 2
       fi
