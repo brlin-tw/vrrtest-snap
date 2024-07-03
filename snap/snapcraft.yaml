@@ -26,6 +26,7 @@ adopt-info: vrrtest
 grade: stable
 confinement: strict
 compression: lzo
+icon: snap/gui/placeholder-icon.png
 
 # s390x does not have the love package at the moment
 architectures:
