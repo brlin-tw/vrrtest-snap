@@ -29,10 +29,10 @@ compression: lzo
 
 # s390x does not have the love package at the moment
 architectures:
-  - amd64
-  - armhf
-  - arm64
-  - ppc64el
+  - build-on: amd64
+  - build-on: armhf
+  - build-on: arm64
+  - build-on: ppc64el
 
 parts:
   vrrtest:
