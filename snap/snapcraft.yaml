@@ -6,7 +6,6 @@ base: core22
 adopt-info: vrrtest
 title: VRRTest
 summary: Test variable refresh rate on Linux
-compression: lzo
 description: |-
   **Packager-specific information**
 
@@ -24,6 +23,7 @@ description: |-
 
 grade: stable
 confinement: strict
+compression: lzo
 
 parts:
   vrrtest:
