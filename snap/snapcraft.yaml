@@ -4,6 +4,7 @@
 name: vrrtest
 base: core22
 version: git
+title: VRRTest
 summary: Test variable refresh rate on Linux
 compression: lzo
 description: |-
