@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: CC-BY-SA-4.0
 name: vrrtest
 base: core22
-version: git
+adopt-info: vrrtest
 title: VRRTest
 summary: Test variable refresh rate on Linux
 compression: lzo
@@ -41,6 +41,25 @@ parts:
       - -usr/lib/*/libpulse-simple.so*
       - -usr/lib/*/libtheora.so*
       - -usr/lib/*/libtheoraenc.so*
+
+    build-packages:
+      - git
+    override-pull: |
+      set -o nounset
+
+      if ! craftctl default; then
+          printf \
+            'Error: Unable to run the default step handler.\n' \
+            1>&2
+          exit 2
+      fi
+
+      if ! "${CRAFT_PROJECT_DIR}/snap/local/scriptlets/upstream-adopt-info"; then
+          printf \
+            'Error: Unable to run the upstream adopt info program.\n' \
+            1>&2
+          exit 2
+      fi
 
   desktop-glib-only:
     build-packages:
