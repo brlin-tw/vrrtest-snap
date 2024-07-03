@@ -21,6 +21,8 @@ This section documents the external materials that is referenced during the deve
   Explains how to use the `glib-only` desktop helper.
 * [snapcraft-desktop-helpers/glib-only at master · ubuntu/snapcraft-desktop-helpers](https://github.com/ubuntu/snapcraft-desktop-helpers/tree/master/glib-only)  
   Contains the implementation of the `glib-only` desktop helper.
+* [Implementing Simple Text Dialog | ChatGPT](https://chatgpt.com/share/fd038592-8ded-4277-8d9c-1ea7c8c3ebb4)  
+  Explains how to implement a simple text dialog using the Love 2D game engine.
 
 ## Licensing
 
