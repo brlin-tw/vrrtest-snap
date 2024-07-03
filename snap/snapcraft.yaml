@@ -2,7 +2,7 @@
 # Copyright 2022 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
 # SPDX-License-Identifier: CC-BY-SA-4.0
 name: vrrtest
-title: VRRTest
+title: VRRTest (UNOFFICIAL)
 summary: Test variable refresh rate on Linux
 description: |-
   **Packager-specific information**
