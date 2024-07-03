@@ -27,6 +27,11 @@ grade: stable
 confinement: strict
 compression: lzo
 icon: snap/gui/placeholder-icon.png
+license: Zlib
+contact: https://gitlab.com/brlin/vrrtest-snap/-/issues
+issues: https://gitlab.com/brlin/vrrtest-snap/-/issues
+source-code: https://gitlab.com/brlin/vrrtest-snap
+website: https://gitlab.com/brlin/vrrtest-snap
 
 # s390x does not have the love package at the moment
 architectures:
