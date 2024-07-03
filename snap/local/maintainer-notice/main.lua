@@ -10,14 +10,6 @@ local width = 600
 local align = "left"
 local font = love.graphics.newFont(14)
 
-function love.load()
-    -- Load any assets if necessary
-end
-
-function love.update(dt)
-    -- Update game logic if necessary
-end
-
 function love.draw()
     -- Set the background color
     love.graphics.clear(backgroundColor)
