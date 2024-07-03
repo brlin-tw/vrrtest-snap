@@ -2,10 +2,6 @@
 # Copyright 2022 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
 # SPDX-License-Identifier: CC-BY-SA-4.0
 name: vrrtest
-base: core22
-assumes:
-  - command-chain
-adopt-info: vrrtest
 title: VRRTest
 summary: Test variable refresh rate on Linux
 description: |-
@@ -23,6 +19,10 @@ description: |-
       Linux. Should work on all major OSes.
       https://github.com/Nixola/VRRTest
 
+base: core22
+assumes:
+  - command-chain
+adopt-info: vrrtest
 grade: stable
 confinement: strict
 compression: lzo
