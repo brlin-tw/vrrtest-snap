@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# This is the maintenance launcher for the snap, make necessary runtime
+# environment changes to make the snap work here.  You may also insert
+# security confinement/deprecation/obsoletion notice of the snap here.
+#
+# Copyright 2024 林博仁(Buo-ren, Lin) <buo.ren.lin@gmail.com>
+# SPDX-License-Identifier: MIT
+
+set \
+    -o errexit \
+    -o errtrace \
+    -o nounset \
+    -o pipefail
+
+if ! love-11.3 "${SNAP}/maintainer-notice"; then
+    printf \
+        'Error: Unable to launch the maintainer notice.\n' \
+        1>&2
+    exit 2
+fi
+
+# Finally run the next part of the command chain
+exec "${@}"
