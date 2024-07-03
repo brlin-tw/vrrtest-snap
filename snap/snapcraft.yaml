@@ -1,0 +1,67 @@
+# Snap recipe for the VRRTest utility
+# Copyright 2022 林博仁(Buo-ren, Lin) <Buo.Ren.Lin@gmail.com>
+# SPDX-License-Identifier: CC-BY-SA-4.0
+name: vrrtest
+base: core22
+version: git
+summary: Test variable refresh rate on Linux
+compression: lzo
+description: |-
+  **Packager-specific information**
+
+  This is NOT an official distribution of VRRTest, please file any issue
+  regarding the usage of this snap to the snap's own issue tracker:
+
+      Issues · 林博仁 Buo-ren, Lin / Unofficial snap packaging for VRRTest · GitLab
+      https://gitlab.com/brlin/vrrtest-snap/-/issues
+
+  Refer the upstream project website for more info about this application:
+
+      Nixola/VRRTest: A small utility I wrote to test variable refresh rate on
+      Linux. Should work on all major OSes.
+      https://github.com/Nixola/VRRTest
+
+grade: devel
+confinement: strict
+
+parts:
+  vrrtest:
+    source: https://github.com/Nixola/VRRTest.git
+    source-tag: v2.0.0
+    plugin: dump
+    stage-packages:
+      - love
+      - libgl1
+    prime:
+      - -usr/lib/*/libicuio.so*
+      - -usr/lib/*/libicui18n.so*
+      - -usr/lib/*/libicutest.so*
+      - -usr/lib/*/libicutu.so*
+      - -usr/lib/*/libpulse-simple.so*
+      - -usr/lib/*/libtheora.so*
+      - -usr/lib/*/libtheoraenc.so*
+
+  desktop-glib-only:
+    build-packages:
+      - libglib2.0-dev
+    plugin: make
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-subdir: glib-only
+    stage-packages:
+      - libglib2.0-bin
+
+lint:
+  ignore:
+    - library:
+        - usr/lib/*/libGL*.so*
+        - usr/lib/*/libxcb-*.so.*
+        - usr/lib/*/libxshmfence.so.*
+
+apps:
+  vrrtest:
+    command: bin/desktop-launch love-11.3 $SNAP
+    plugs:
+      - desktop
+      - opengl
+      - wayland
+      - x11
