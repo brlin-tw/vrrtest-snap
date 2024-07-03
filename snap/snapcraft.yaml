@@ -32,18 +32,8 @@ parts:
     source: https://github.com/Nixola/VRRTest.git
     source-tag: v2.0.0
     plugin: dump
-    stage-packages:
-      - love
-      - libgl1
-    prime:
-      - -usr/lib/*/libicuio.so*
-      - -usr/lib/*/libicui18n.so*
-      - -usr/lib/*/libicutest.so*
-      - -usr/lib/*/libicutu.so*
-      - -usr/lib/*/libpulse-simple.so*
-      - -usr/lib/*/libtheora.so*
-      - -usr/lib/*/libtheoraenc.so*
-
+    organize:
+      '*': VRRTest/
     build-packages:
       - git
     override-pull: |
@@ -62,6 +52,20 @@ parts:
             1>&2
           exit 2
       fi
+
+  vrrtest-runtime-deps:
+    plugin: nil
+    stage-packages:
+      - love
+      - libgl1
+    prime:
+      - -usr/lib/*/libicuio.so*
+      - -usr/lib/*/libicui18n.so*
+      - -usr/lib/*/libicutest.so*
+      - -usr/lib/*/libicutu.so*
+      - -usr/lib/*/libpulse-simple.so*
+      - -usr/lib/*/libtheora.so*
+      - -usr/lib/*/libtheoraenc.so*
 
   desktop-glib-only:
     build-packages:
@@ -96,7 +100,7 @@ lint:
 
 apps:
   vrrtest:
-    command: usr/bin/love-11.3 $SNAP
+    command: usr/bin/love-11.3 $SNAP/VRRTest
     command-chain:
       - bin/desktop-launch
       - bin/vrrtest-launch
