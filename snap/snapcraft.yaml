@@ -27,6 +27,13 @@ grade: stable
 confinement: strict
 compression: lzo
 
+# s390x does not have the love package at the moment
+architectures:
+  amd64:
+  armhf:
+  arm64:
+  ppc64el:
+
 parts:
   vrrtest:
     source: https://github.com/Nixola/VRRTest.git
