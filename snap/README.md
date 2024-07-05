@@ -6,7 +6,8 @@
 
 [![Status Badge of the `vrrtest` Snap](https://snapcraft.io/vrrtest/badge.svg)](https://snapcraft.io/vrrtest)
 
-![Screenshot of the Snapped Application](local/screenshots/bars-scene.png "Screenshot of the Snapped Application")
+![Screenshot of the Snapped Application](local/screenshots/bars-scene.png "Screenshot of the Snapped Application(Bars scene)")
+![Screenshot of the Snapped Application](local/screenshots/squares-scene.png "Screenshot of the Snapped Application(Squares scene)")
 
 Published for <img src="http://anything.codes/slack-emoji-for-techies/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters
 
