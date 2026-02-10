@@ -62,7 +62,8 @@ parts:
       fi
 
       if ! "${CRAFT_PROJECT_DIR}/snap/local/scriptlets/selective-checkout" \
-          --append-packaging-revision; then
+          --append-packaging-revision \
+          --force-stable; then
           printf \
             'Error: Unable to run the selective-checkout program.\n' \
             1>&2
