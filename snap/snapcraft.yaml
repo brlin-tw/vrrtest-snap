@@ -55,19 +55,19 @@ parts:
       set -o nounset
 
       if ! craftctl default; then
-          printf \
-            'Error: Unable to run the default step handler.\n' \
-            1>&2
-          exit 2
+        printf \
+          'Error: Unable to run the default step handler.\n' \
+          1>&2
+        exit 2
       fi
 
       if ! "${CRAFT_PROJECT_DIR}/snap/local/scriptlets/selective-checkout" \
-          --append-packaging-revision \
-          --force-stable; then
-          printf \
-            'Error: Unable to run the selective-checkout program.\n' \
-            1>&2
-          exit 2
+        --append-packaging-revision \
+        --force-stable; then
+        printf \
+          'Error: Unable to run the selective-checkout program.\n' \
+          1>&2
+        exit 2
       fi
 
   vrrtest-runtime-deps:
